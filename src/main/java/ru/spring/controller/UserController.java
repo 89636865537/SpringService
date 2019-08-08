@@ -1,8 +1,8 @@
-package ru.spring.service;
+package ru.spring.controller;
 
 
 import org.springframework.web.bind.annotation.*;
-import ru.spring.service.data.User;
+import ru.spring.controller.data.User;
 
 import java.util.Collection;
 import java.util.List;

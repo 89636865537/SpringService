@@ -1,4 +1,4 @@
-package ru.spring.service;
+package ru.spring.controller;
 
 
 import org.springframework.boot.SpringApplication;
