@@ -1,7 +1,7 @@
-package ru.spring.controller;
+package ru.spring.repository;
 
 import org.springframework.data.repository.CrudRepository;
-import ru.spring.controller.data.User;
+import ru.spring.repository.entity.User;
 
-public interface UserRepoApi extends CrudRepository<User,String> {
+public interface UserRepository extends CrudRepository<User, Long> {
 }

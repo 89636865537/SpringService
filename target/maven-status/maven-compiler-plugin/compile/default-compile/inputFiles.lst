@@ -1,3 +1,7 @@
-C:\Users\Egor\IdeaProjects\SpringService\src\main\java\ru\spring\service\RestApiServices.java
-C:\Users\Egor\IdeaProjects\SpringService\src\main\java\ru\spring\service\data\User.java
-C:\Users\Egor\IdeaProjects\SpringService\src\main\java\ru\spring\service\Application.java
+C:\Users\Egor\IdeaProjects\SpringService\src\main\java\ru\spring\service\UserService.java
+C:\Users\Egor\IdeaProjects\SpringService\src\main\java\ru\spring\controller\UserController.java
+C:\Users\Egor\IdeaProjects\SpringService\src\main\java\ru\spring\config\RootConfig.java
+C:\Users\Egor\IdeaProjects\SpringService\src\main\java\ru\spring\controller\dto\UserDto.java
+C:\Users\Egor\IdeaProjects\SpringService\src\main\java\ru\spring\runner\Application.java
+C:\Users\Egor\IdeaProjects\SpringService\src\main\java\ru\spring\repository\entity\User.java
+C:\Users\Egor\IdeaProjects\SpringService\src\main\java\ru\spring\repository\UserRepository.java

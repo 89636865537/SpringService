@@ -1,3 +1,7 @@
-ru\spring\service\data\User.class
-ru\spring\service\RestApiServices.class
-ru\spring\service\Application.class
+ru\spring\Application.class
+ru\spring\config\RootConfig.class
+ru\spring\service\UserService.class
+ru\spring\controller\dto\UserDto.class
+ru\spring\repository\UserRepository.class
+ru\spring\controller\UserController.class
+ru\spring\repository\entity\User.class

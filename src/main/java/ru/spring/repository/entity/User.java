@@ -1,4 +1,4 @@
-package ru.spring.controller.data;
+package ru.spring.repository.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,12 +9,16 @@ import javax.persistence.Id;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private   String id;
+    private   Long id;
     private   String login;
     private   String password;
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public void setPassword(String password) {

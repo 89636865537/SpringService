@@ -1,37 +1,31 @@
 package ru.spring.controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.spring.controller.data.User;
+import ru.spring.repository.entity.User;
+import ru.spring.service.UserService;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @RestController
 @RequestMapping(value = "/service")
-public class RestApiServices {
+public class UserController {
 
-    @GetMapping(value = "/user", params = {"userId", "login", "password"})
-    public User getUser(@RequestParam(value = "userId", required = false) String id, @RequestParam(name = "login", required = false) String login, @RequestParam(name = "password", required = false) String password) {
-        System.out.println("userId : " + id);
-        User user = new User();
-        user.setLogin(login);
-        user.setPassword(password);
-        System.out.println("user : " + user);
-        return user;
+    @Autowired
+    UserService userService;
+
+    @GetMapping(value = "/user", params = {"userId"})
+    public Optional<User> getUser(@RequestParam(value = "userId", required = false) Optional<String> id) {
+        return userService.getUserById(id);
     }
 
 
     @PostMapping(value = "/user/save")
-    public Boolean saveUser(@RequestBody List<User> users){
-        Stream<User> userStream = Optional.of(users)
-                                                .map(Collection:: stream)
-                                                .orElseGet(Stream::empty);
-
-        userStream.forEach(System.out::println);
-        return true;
+    public Optional<List<Long>> saveUser(@RequestBody Optional<List<User>> users){
+        return  userService.saveAllUsers(users);
 
     }
 
