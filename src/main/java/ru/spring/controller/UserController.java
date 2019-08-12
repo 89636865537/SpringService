@@ -7,8 +7,6 @@ import ru.spring.repository.entity.User;
 import ru.spring.service.UserService;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @RestController
 @RequestMapping(value = "/service")
@@ -18,13 +16,13 @@ public class UserController {
     UserService userService;
 
     @GetMapping(value = "/user", params = {"userId"})
-    public Optional<User> getUser(@RequestParam(value = "userId", required = false) Optional<String> id) {
+    public User getUser(@RequestParam(value = "userId", required = false) Optional<String> id) {
         return userService.getUserById(id);
     }
 
 
     @PostMapping(value = "/user/save")
-    public Optional<List<Long>> saveUser(@RequestBody Optional<List<User>> users){
+    public List<Long> saveUser(@RequestBody Optional<List<User>> users){
         return  userService.saveAllUsers(users);
 
     }

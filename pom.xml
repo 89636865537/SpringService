@@ -36,6 +36,11 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>1.7</version>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -49,7 +54,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>ru.spring.Application</mainClass>
+                    <mainClass>ru.spring.runner.Application</mainClass>
                 </configuration>
             </plugin>
         </plugins>

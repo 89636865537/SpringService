@@ -1,6 +1,6 @@
-ru\spring\Application.class
 ru\spring\config\RootConfig.class
 ru\spring\service\UserService.class
+ru\spring\runner\Application.class
 ru\spring\controller\dto\UserDto.class
 ru\spring\repository\UserRepository.class
 ru\spring\controller\UserController.class
